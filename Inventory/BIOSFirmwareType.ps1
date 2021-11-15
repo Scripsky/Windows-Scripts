@@ -1,0 +1,1 @@
+Get-ComputerInfo -Property "BiosFirmwareType" | Out-File -FilePath "C:\ProgramData\Quest\KACE\scripts\CustomInventory\BIOSFirmwareType.txt"

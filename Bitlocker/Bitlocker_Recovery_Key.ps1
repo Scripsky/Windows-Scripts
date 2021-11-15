@@ -1,0 +1,1 @@
+﻿(Get-BitLockerVolume -MountPoint C).KeyProtector | Select-Object -ExpandProperty RecoveryPassword | Out-File -FilePath "FILEPATH"
