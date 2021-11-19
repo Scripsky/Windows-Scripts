@@ -1,5 +1,5 @@
 ﻿$BIOSConnectStatus = Test-Path -Path C:\ProgramData\Quest\KACE\scripts\CustomInventory\BIOSConnect\DellRecommendsSettings_x64.txt
-$BIOSConnecContents = Get-Content -Path C:\ProgramData\Quest\KACE\scripts\CustomInventory\BIOSConnect\BIOSConnect_Status.txt | Out-String -ErrorAction SilentlyContinue
+$BIOSConnectContents = Get-Content -Path C:\ProgramData\Quest\KACE\scripts\CustomInventory\BIOSConnect\BIOSConnect_Status.txt | Out-String -ErrorAction SilentlyContinue
 
 if ($BIOSConnectStatus -eq $false){
     start "C:\ProgramData\Quest\KACE\scripts\CustomInventory\BIOSConnect\DellRecommendsSettings_x64.exe"
