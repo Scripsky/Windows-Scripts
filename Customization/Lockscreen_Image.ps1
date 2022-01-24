@@ -32,13 +32,11 @@ $lockScreenImagePath   = $Property.LockScreenImagePath | Out-String
 $lockScreenImageStatus = $Property.LockScreenImageStatus | Out-String
 $lockScreenImageUrl    = $Property.LockScreenImageUrl | Out-String
 $url                   = 'URLTOIMAGE'
-$X                     = 10
 
 if ($lockScreenImagePath -notmatch ".jpeg"){
     if ($testImagePath -eq $false){
         New-Item -Path $imagePath -ItemType Directory -Force
-    }
-    
+    } 
     wget -Uri $url -OutFile "$imagePath\LockScreenImage.jpeg" -UseBasicParsing
     New-ItemProperty -Path $regPath -Name 'LockScreenImagePath' -Value "$imagePath\LockScreenImage.jpeg" -PropertyType String -Force
 }
